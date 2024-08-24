@@ -1,0 +1,84 @@
+body {
+    padding: 20px;
+}
+
+.header {
+    display: block;
+}
+
+#player-names {
+    width: 80%;
+    height: 400px;
+    font-size: 24px;
+}
+
+.error {
+    display: block;
+    margin-top: 20px;
+    color: red;
+}
+
+input[type="number"] {
+    width: 60px;
+}
+
+ul.roles {
+    list-style: none;
+    margin: 30px 100px;
+}
+
+ul.roles li {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    line-height: 40px;
+    cursor: default;
+}
+
+#game {
+    user-select: none;
+    display: none;
+}
+
+.player img {
+    width: 100%;
+    margin-bottom: 10px;
+    transition: ease-out all .25s;
+}
+.player {
+    position: relative;
+    padding: 20px;
+    cursor: pointer;
+    text-align: center;
+}
+.player.dead img {
+    opacity: 0.25;
+}
+.player.dead .skull {
+    background-image: url(../images/skull.svg);
+    width: 50%;
+    height: 100%;
+    top: 40%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+
+#end {
+    display: block;
+}
+
+.footer {
+    display: block;
+}
+
+.credits {
+    max-width: 500px;
+    margin: auto;
+    margin-top: 200px;
+    font-size: 12px;
+    text-align: center;
+}

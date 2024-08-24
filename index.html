@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Eben</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="werewolf.js"></script>
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/barebones.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <link rel="icon" type="image/png" href="images/icon.png">
+
+</head>
+<body>
+
+	<div class="grid-container header">
+		<h4>Werewolf Randomizer</h4>
+		<p>Website simpel untuk bermain werewolf<br>Tambahkan Player dan Jumlah Role sesuai keinginan<br>Klik pada pemain untuk beralih status mati/hidup. </p>
+	</div>
+	<div id="setup" class="grid-container halves">
+		<div>
+			<p>Masukan Nama Pemain, 1 nama perbaris</p>
+			<textarea id="player-names"></textarea>
+		</div>
+		<div>
+			<p>Pilih Roles</p>
+			<ul class="roles">
+				<li title="Werewolves memilih 1 orang untuk dibunuh pada malam hari">Werewolf <input id="werewolfCount" type="number" value="0" min="1" /></li>
+				<li title="Seers pilih 1 orang untuk diselidiki pada malam hari untuk menentukan status mereka">Seer <input id="seerCount" type="number" value="0" min="0" /></li>
+				<li title="Hunters memilih 1 orang untuk dibunuh">Hunter <input id="hunterCount" type="number" value="0" min="0" /></li>
+				<li title="Witch memilih 1 orang untuk diberikan racun atau menyembuhkan sekali selama permainan">Witch <input id="witchCount" type="number" value="0" min="0" /></li>
+				<li title="Guardian memilih 1 orang untuk dilindungi pada malam hari dan memantulkan serangan">Guardian <input id="guardCount" type="number" value="0" min="0" /></li>
+			</ul>
+			<button id="start" class="button-primary">Start</button>
+			<span id="error" class="error"></span>
+		</div>
+	</div>
+	<div id="game" class="grid-container footer">
+		<div id="players" class="grid-container quarters"></div>
+		<button id="end" class="button-primary u-pull-right">End Game</button>
+	</div>
+	<div class="credits">Icons from <a href="https://iconscout.com/" title="Iconscout">Iconscout</a> dan dibuat oleh eben</div>
+</body>
+</html>
