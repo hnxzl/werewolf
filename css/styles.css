@@ -1,5 +1,8 @@
 body {
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 16px;
 }
 
 .header {
@@ -7,9 +10,10 @@ body {
 }
 
 #player-names {
-    width: 80%;
-    height: 400px;
-    font-size: 24px;
+    width: 100%;
+    max-width: 500px;
+    height: 200px;
+    font-size: 16px;
 }
 
 .error {
@@ -20,11 +24,12 @@ body {
 
 input[type="number"] {
     width: 60px;
+    font-size: 16px;
 }
 
 ul.roles {
     list-style: none;
-    margin: 30px 100px;
+    margin: 10px;
 }
 
 ul.roles li {
@@ -37,28 +42,39 @@ ul.roles li {
 
 #game {
     user-select: none;
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
-.player img {
-    width: 100%;
-    margin-bottom: 10px;
-    transition: ease-out all .25s;
-}
 .player {
     position: relative;
     padding: 20px;
     cursor: pointer;
     text-align: center;
+    flex: 0 1 calc(25% - 10px);
+    max-width: 150px;
+    min-width: 100px;
 }
+
+.player img {
+    width: 100%;
+    height: auto;
+    max-width: 100px;
+    margin-bottom: 10px;
+    transition: ease-out all .25s;
+}
+
 .player.dead img {
     opacity: 0.25;
 }
+
 .player.dead .skull {
     background-image: url(../images/skull.svg);
-    width: 50%;
-    height: 100%;
-    top: 40%;
+    width: 50px;
+    height: 100px;
+    top: 50%;
     left: 0;
     right: 0;
     bottom: 0;
@@ -81,4 +97,24 @@ ul.roles li {
     margin-top: 200px;
     font-size: 12px;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .player {
+        flex: 0 1 calc(33.333% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    
+    h1, h2 {
+        font-size: 1.5em;
+    }
+
+    .player {
+        flex: 0 1 calc(50% - 10px);
+    }
 }
